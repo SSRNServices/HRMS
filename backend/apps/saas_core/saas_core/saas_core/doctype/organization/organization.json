@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:subdomain",
+ "creation": "2026-04-25 17:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "organization_name",
+  "subdomain",
+  "owner_email",
+  "column_break_1",
+  "status",
+  "plan",
+  "section_limits",
+  "max_employees",
+  "max_admins",
+  "column_break_2",
+  "feature_flags",
+  "section_meta",
+  "provisioning_status",
+  "provisioning_error",
+  "created_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Organization Name",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "subdomain",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Subdomain",
+   "reqd": 1,
+   "unique": 1,
+   "description": "Lowercase letters, digits, hyphens only. Becomes: subdomain.yourapp.com",
+   "search_index": 1
+  },
+  {
+   "fieldname": "owner_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Owner Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Pending\nActive\nSuspended\nTerminated",
+   "default": "Pending",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Plan",
+   "options": "starter\ngrowth\nscale\nenterprise",
+   "default": "starter",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_limits",
+   "fieldtype": "Section Break",
+   "label": "Limits"
+  },
+  {
+   "fieldname": "max_employees",
+   "fieldtype": "Int",
+   "label": "Max Employees",
+   "default": 25,
+   "reqd": 1,
+   "description": "0 = unlimited (enterprise)"
+  },
+  {
+   "fieldname": "max_admins",
+   "fieldtype": "Int",
+   "label": "Max Admins",
+   "default": 2,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feature_flags",
+   "fieldtype": "Small Text",
+   "label": "Feature Flags",
+   "description": "JSON array of enabled features, e.g. [\"leave_management\",\"timesheets\"]"
+  },
+  {
+   "fieldname": "section_meta",
+   "fieldtype": "Section Break",
+   "label": "Provisioning Metadata"
+  },
+  {
+   "fieldname": "provisioning_status",
+   "fieldtype": "Select",
+   "label": "Provisioning Status",
+   "options": "\nqueued\nin_progress\ncompleted\nfailed\nrolled_back",
+   "read_only": 1
+  },
+  {
+   "fieldname": "provisioning_error",
+   "fieldtype": "Small Text",
+   "label": "Provisioning Error",
+   "read_only": 1,
+   "description": "Last error message from site provisioning"
+  },
+  {
+   "fieldname": "created_at",
+   "fieldtype": "Datetime",
+   "label": "Created At",
+   "read_only": 1,
+   "default": "Now"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [
+  {
+   "link_doctype": "Site Mapping",
+   "link_fieldname": "organization"
+  },
+  {
+   "link_doctype": "Subscription",
+   "link_fieldname": "organization"
+  },
+  {
+   "link_doctype": "Org Admin",
+   "link_fieldname": "organization"
+  }
+ ],
+ "modified": "2026-04-25 17:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SaaS Core",
+ "name": "Organization",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SaaS Super Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "SaaS Support"
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "organization_name",
+ "track_changes": 1
+}

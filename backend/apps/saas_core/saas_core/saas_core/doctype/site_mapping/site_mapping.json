@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:site_name",
+ "creation": "2026-04-25 17:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "organization",
+  "site_name",
+  "database_name",
+  "column_break_1",
+  "site_status",
+  "subdomain",
+  "bench_path",
+  "section_timing",
+  "provisioned_at",
+  "last_checked_at",
+  "column_break_2",
+  "apps_installed",
+  "admin_password_hash"
+ ],
+ "fields": [
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Organization",
+   "options": "Organization",
+   "reqd": 1,
+   "unique": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Site Name",
+   "reqd": 1,
+   "unique": 1,
+   "description": "Full Frappe site hostname, e.g. acme.hrms.com",
+   "search_index": 1
+  },
+  {
+   "fieldname": "database_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Database Name",
+   "reqd": 1,
+   "unique": 1,
+   "description": "MariaDB database name for this tenant site"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Site Status",
+   "options": "pending\nactive\nsuspended\ndecommissioned\nfailed",
+   "default": "pending",
+   "search_index": 1
+  },
+  {
+   "fieldname": "subdomain",
+   "fieldtype": "Data",
+   "label": "Subdomain",
+   "read_only": 1,
+   "description": "Mirrors the Organization subdomain field"
+  },
+  {
+   "fieldname": "bench_path",
+   "fieldtype": "Data",
+   "label": "Bench Path",
+   "description": "Absolute path to the bench directory, e.g. /home/frappe/frappe-bench"
+  },
+  {
+   "fieldname": "section_timing",
+   "fieldtype": "Section Break",
+   "label": "Timing"
+  },
+  {
+   "fieldname": "provisioned_at",
+   "fieldtype": "Datetime",
+   "label": "Provisioned At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_checked_at",
+   "fieldtype": "Datetime",
+   "label": "Last Health Check",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apps_installed",
+   "fieldtype": "Small Text",
+   "label": "Apps Installed",
+   "read_only": 1,
+   "description": "JSON list of apps installed on this tenant site"
+  },
+  {
+   "fieldname": "admin_password_hash",
+   "fieldtype": "Password",
+   "label": "Admin Password Hash",
+   "description": "Hashed admin password stored for emergency recovery only"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-04-25 17:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SaaS Core",
+ "name": "Site Mapping",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SaaS Super Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "site_name",
+ "track_changes": 1
+}
