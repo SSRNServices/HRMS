@@ -1,16 +1,16 @@
 # Next Steps - HRMS SaaS
 
 ## Immediate (Do First)
-1. **Initialize Frontend**: Set up Next.js project in the `frontend/` directory with Tailwind CSS.
-2. **Attendance Reports**: Build Daily and Monthly attendance report views (Python SQL queries or SQL Views).
-3. **API Client**: Create a simple Next.js service to consume the `check_in`/`check_out` APIs for testing.
+1. **Initialize Next.js Frontend**: Create the `/frontend` directory and set up the base project (Next.js 14+, Tailwind, ShadcnUI).
+2. **Leave Balance Validation**: Implement a `before_save` hook in `Leave Request` to prevent submissions that exceed the employee's `Leave Balance`.
+3. **Attendance Reports**: Build the "Daily Attendance Summary" and "Monthly Attendance Sheet" reports in the backend.
 
 ## Next
-- **Phase 2 Implementation**: Define Leave types, Accrual policies, and Approval workflows.
-- **Employee Directory**: Build a public-facing directory view in the frontend.
-- **Geo-fencing Logic**: Add server-side validation to check if check-in coordinates are within the office `Location` radius.
+- **Leave Accrual Engine**: Create a Python background job (`hooks.py` scheduler) to automatically grant leave based on `Leave Policy` rules.
+- **Geo-fencing Validation**: Add server-side distance calculation to the `check_in` API to verify the employee is at the assigned `Location`.
+- **Frontend Auth**: Connect Next.js to Frappe's authentication system (Session/Token).
 
 ## Later
-- **Phase 3 (Request Desk)**: Internal ticketing system.
-- **Recruitment Module**: Job postings and candidate pipeline.
-- **Mobile App**: Native mobile wrapper for attendance tracking.
+- **Mobile PWA**: Optimize the frontend for mobile attendance marking.
+- **Document Management**: Allow employees to upload sick notes or ID documents.
+- **Phase 4 (Payroll)**: Start building the salary component logic.
