@@ -14,11 +14,20 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "HR Employee",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Employee",
    "link_count": 0,
    "link_to": "Employee",
    "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "type": "Link"
   },
   {
@@ -28,7 +37,7 @@
    "link_count": 0,
    "link_to": "Designation",
    "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "type": "Link"
   },
   {
@@ -38,11 +47,11 @@
    "link_count": 0,
    "link_to": "Location",
    "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "type": "Link"
   }
  ],
- "modified": "2026-04-25 06:20:51.345147",
+ "modified": "2026-04-25 16:25:36.183502",
  "modified_by": "Administrator",
  "module": "HR Employee",
  "name": "HR Employee",
@@ -52,6 +61,25 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 0.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Employee",
+   "link_to": "Employee",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Designation",
+   "link_to": "Designation",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Location",
+   "link_to": "Location",
+   "type": "DocType"
+  }
+ ],
  "title": "HR Employee"
 }

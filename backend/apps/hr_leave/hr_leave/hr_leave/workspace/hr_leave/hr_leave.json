@@ -14,11 +14,20 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Leave Type",
-   "link_count": 0,
-   "link_to": "Leave Type",
+   "label": "HR Leave",
+   "link_count": 2,
    "link_type": "DocType",
    "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Leave Request",
+   "link_count": 0,
+   "link_to": "Leave Request",
+   "link_type": "DocType",
+   "onboard": 1,
    "type": "Link"
   },
   {
@@ -28,31 +37,11 @@
    "link_count": 0,
    "link_to": "Leave Policy",
    "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Leave Request",
-   "link_count": 0,
-   "link_to": "Leave Request",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Leave Balance",
-   "link_count": 0,
-   "link_to": "Leave Balance",
-   "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "type": "Link"
   }
  ],
- "modified": "2026-04-25 06:20:51.384732",
+ "modified": "2026-04-25 16:25:36.303125",
  "modified_by": "Administrator",
  "module": "HR Leave",
  "name": "HR Leave",
@@ -62,6 +51,19 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 0.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Leave Request",
+   "link_to": "Leave Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Leave Policy",
+   "link_to": "Leave Policy",
+   "type": "DocType"
+  }
+ ],
  "title": "HR Leave"
 }

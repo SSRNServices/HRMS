@@ -14,25 +14,24 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Timesheet",
-   "link_count": 0,
-   "link_to": "Timesheet",
+   "label": "HR Timesheet",
+   "link_count": 1,
    "link_type": "DocType",
    "onboard": 0,
-   "type": "Link"
+   "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Shift Assignment",
+   "label": "Timesheet",
    "link_count": 0,
-   "link_to": "Shift Assignment",
+   "link_to": "Timesheet",
    "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "type": "Link"
   }
  ],
- "modified": "2026-04-25 06:20:51.405949",
+ "modified": "2026-04-25 16:25:36.378607",
  "modified_by": "Administrator",
  "module": "HR Timesheet",
  "name": "HR Timesheet",
@@ -42,6 +41,13 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 0.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Timesheet",
+   "link_to": "Timesheet",
+   "type": "DocType"
+  }
+ ],
  "title": "HR Timesheet"
 }

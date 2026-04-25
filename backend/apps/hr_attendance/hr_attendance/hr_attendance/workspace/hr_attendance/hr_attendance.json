@@ -14,15 +14,24 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "HR Attendance",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Attendance",
    "link_count": 0,
    "link_to": "Attendance",
    "link_type": "DocType",
-   "onboard": 0,
+   "onboard": 1,
    "type": "Link"
   }
  ],
- "modified": "2026-04-25 06:20:51.368620",
+ "modified": "2026-04-25 16:25:36.248915",
  "modified_by": "Administrator",
  "module": "HR Attendance",
  "name": "HR Attendance",
@@ -32,6 +41,13 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 0.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Attendance",
+   "link_to": "Attendance",
+   "type": "DocType"
+  }
+ ],
  "title": "HR Attendance"
 }
