@@ -1,25 +1,23 @@
 # Current State - HRMS SaaS
 
 ## Working
-- **Backend Infrastructure**: Frappe Framework v15 stable with corrected app nesting.
-- **Org & Employee**: Hierarchy support (Company/Dept) and enriched Employee profiles with Leave Policy mapping.
-- **Attendance**: Whitelisted Geo-tracking APIs for check-in/out logic.
-- **Leave Management**: Full lifecycle (Policies -> Allocations -> Requests) with an active Approval Workflow.
-- **Time Tracking**: Timesheet logging and shift assignment foundation.
-- **Security**: Automated role provisioning (`HR Admin`, `HR User`, `Employee`).
-- **UI**: Frappe Desk is accessible and verified.
+- **Backend**: Frappe Framework v15 stable environment.
+- **Organization Management**: `Company` and `Department` DocTypes with hierarchy support.
+- **Employee Management**: `Employee`, `Designation`, and `Location` DocTypes implemented.
+- **Attendance**: `Attendance` DocType with GPS tracking (lat/long) for both check-in and check-out.
+- **APIs**: Whitelisted REST endpoints for `check_in` and `check_out`.
+- **Roles**: Foundation roles (`HR Admin`, `HR User`, `Employee`) defined.
 
 ## Incomplete / In Progress
-- **Leave Accruals**: Logic for periodic leave allocation (monthly/yearly accrual) is planned but currently requires manual balance setup.
-- **Validation Logic**: `Leave Request` does not yet validate if the requested days exceed the current `Leave Balance`.
-- **Geo-fencing**: APIs log coordinates but do not yet restrict check-ins based on `Location` radius.
+- **Attendance Reports**: Schema ready, but report views/analytics not yet built.
+- **Site Isolation**: Multi-tenant site creation works, but cross-site data isolation needs formal testing.
 
 ## Not Started
-- **Frontend (Next.js)**: UI initialization and client-side API integration.
-- **Reporting**: Advanced analytics for attendance trends and leave liability.
-- **Payroll**: Phase 4 integration for salary processing based on attendance/leave data.
+- **Frontend**: Next.js application initialization and API integration.
+- **Phase 2**: Leave Management (PTO), Policy engine, and Timesheets.
+- **Phase 3**: Request Desk and Workflow engine.
 
 ## Tech Notes
-- **App Structure**: Standardized to `apps/[app]/[app]/[module]/doctype/` for all custom modules.
-- **Multi-tenancy**: Site-based isolation enabled for `dev.hrms.localhost`.
-- **Workflow**: `Leave Approval` workflow governs the `Leave Request` status field.
+- **Modular Apps**: Core functionality split across `hr_core`, `hr_employee`, and `hr_attendance`.
+- **REST-First**: All business logic is accessible via Frappe's REST API for frontend decoupling.
+- **Geo-Native**: Attendance records require GPS coordinates for validation.

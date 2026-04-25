@@ -3,7 +3,7 @@
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "hash",
- "creation": "2026-04-25 05:00:00.000000",
+ "creation": "2026-04-25 05:00:00",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -45,9 +45,8 @@
    "label": "End Date"
   }
  ],
- "index_pages": [],
  "links": [],
- "modified": "2026-04-25 05:00:00.000000",
+ "modified": "2026-04-25 06:18:11.881540",
  "modified_by": "Administrator",
  "module": "HR Timesheet",
  "name": "Shift Assignment",
@@ -64,8 +63,32 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
