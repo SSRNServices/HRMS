@@ -1,0 +1,17 @@
+# Frappe Bench
+backend/env/
+backend/sites/
+backend/logs/
+backend/config/
+backend/patches.txt
+backend/Procfile
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
